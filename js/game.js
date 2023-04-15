@@ -6,12 +6,12 @@ class Game {
         this.gameScore = document.getElementById("score");
         this.gameLives = document.getElementById("lives");
         this.player = new Player(
-            this.gameScreen,
-            200, //horizontal starting absolute position
-            500, //vertical starting absolute position 
-            100, //fixed width of vehicle img
-            150, //fixed height of vehicle img
-            "./images/car.png"
+            this.gameScreen, 
+            200, //left; horizontal starting absolute position
+            500, //top; vertical starting absolute position 
+            100, //width; initial width of vehicle img
+            150, //height; initial height of vehicle img
+            "./images/car.png" //imgSrc
         );
         this.height = 600;
         this.width = 500;
