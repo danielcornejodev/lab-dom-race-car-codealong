@@ -5,7 +5,14 @@ class Game {
         this.gameEndScreen = document.getElementById("game-end");
         this.gameScore = document.getElementById("score");
         this.gameLives = document.getElementById("lives");
-        this.player = null;
+        this.player = new Player(
+            this.gameScreen,
+            200,
+            500,
+            100,
+            150,
+            "./images/car.png"
+        );
         this.height = 600;
         this.width = 500;
         this.obstacles = [];
@@ -40,11 +47,11 @@ class Game {
         this.update();
 
         //recursive loop to invoke itself repeatedly. Ensures a consistest frame rate 
-        window.requestAnimationFrame()() => this.gameLoop();
+        window.requestAnimationFrame(() => this.gameLoop());
     }
 
     update() {
-        console.log("in the update");
+        this.player.move();
     }
 
     endGame() {}
