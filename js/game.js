@@ -7,10 +7,10 @@ class Game {
         this.gameLives = document.getElementById("lives");
         this.player = new Player(
             this.gameScreen,
-            200,
-            500,
-            100,
-            150,
+            200, //horizontal starting absolute position
+            500, //vertical starting absolute position 
+            100, //fixed width of vehicle img
+            150, //fixed height of vehicle img
             "./images/car.png"
         );
         this.height = 600;
@@ -51,6 +51,7 @@ class Game {
     }
 
     update() {
+        //invoke move method. Move method continues to update the players position of x and y 
         this.player.move();
     }
 
