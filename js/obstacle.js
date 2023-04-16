@@ -1,7 +1,7 @@
 class Obstacle {
     constructor(gameScreen) {
         this.gameScreen = gameScreen;
-        this.left = 250; //left; horizontal absolute position
+        this.left = Math.floor(Math.random() * 250);; //left; horizontal absolute position
         this.top = 600;  //vertical starting absolute position
         this.width = 100; //width; initial width of vehicle img
         this.height = 150; //height; initial height of vehicle img
