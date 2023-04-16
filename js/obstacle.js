@@ -1,13 +1,13 @@
 class Obstacle {
     constructor(gameScreen) {
         this.gameScreen = gameScreen;
-        this.left = Math.floor(Math.random() * 250);; //left; horizontal absolute position
-        this.top = 600;  //vertical starting absolute position
+        this.left = Math.floor(Math.random() * 250); //left; horizontal absolute position
+        this.top = 60;  //vertical starting absolute position
         this.width = 100; //width; initial width of vehicle img
         this.height = 150; //height; initial height of vehicle img
         
         this.element = document.createElement("img"); //the image element representing the car. 
-        this.element.src = "./images/redCar.png"; //red car img 
+        this.element.src = "images/redCar.png"; //red car img 
     
         this.element.style.position = "absolute";
     
@@ -27,7 +27,6 @@ class Obstacle {
     }
     
     move() {
-        this.top += 3;
         
         // Move the obstacle down by 3px
         this.top += 3;

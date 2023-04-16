@@ -56,6 +56,8 @@ class Game {
 
         for (let i = 0; i < this.obstacles.length; i++) {
             const obstacle = this.obstacles[i];
+            obstacle.move();
+
 
             // If the player's car collides with an obstacle
             if (this.player.didCollide(obstacle)) {
@@ -78,6 +80,7 @@ class Game {
                 // Update the counter variable to account for the removed obstacle
                 i--;
             }
+        }
 
             // If the lives are 0, end the game
             if (this.lives === 0) {
@@ -89,7 +92,7 @@ class Game {
             if (Math.random() > 0.98 && this.obstacles.length < 1){
                 this.obstacles.push(new Obstacle(this.gameScreen))
             }
-        }
+        
         
     }
 
